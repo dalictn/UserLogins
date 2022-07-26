@@ -5,8 +5,8 @@ Pass = input("Please input your password here :")
 
 
 #Authenticate the user on if they are Katz
-def is_valid_credentials():
-    if Username == "Katz" and Pass == "123":
+def is_valid_credentials(u,pw):
+    if u == "Katz" and pw == "123":
         print("Your deepest, darkest secret")
     else:
         print("Access Denied")
