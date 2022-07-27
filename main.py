@@ -8,20 +8,34 @@ Userlist = {
     "Snek": 123
 }
 
-
-#Authenticate the user on if they are Katz
 def is_valid_credentials(u,pw):
-    '''if u == "Katz" and pw == "123":
-        print("Your deepest, darkest secret")
-    else:
-        print("Access Denied")'''
-    auth = {u,pw}
+#Check if username is one of the keys, then return true for next function
+    def is_valid_username():
+        '''if u == "Katz" and pw == "123":
+            print("Your deepest, darkest secret")
+        else:
+            print("Access Denied")'''
+        auth = {u,pw}
 
-    if str(u) in Userlist and int(pw) in Userlist:
-        print("Your deepest, darkest secret")
+        if str(u) in Userlist:
+            return(True)
+
+    def is_valid_password():
+        if is_valid_credentials == True:
+            if int(pw) in Userlist:
+                return(True)
+
+    if is_valid_username == True and is_valid_password == True:
+        print("Secret")
     
     else:
-        print("Access Denied")
+        print("Debug")
+
+    is_valid_username()
+    is_valid_password()
+
+    
+
     
 
 
