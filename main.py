@@ -2,10 +2,14 @@
 Username = input("Hello, User. Please enter your username here: ")
 Pass = input("Please input your password here: ")
 
+
+str(Username)
+int(Pass)
+
 Userlist = {
-    "Katz": 123,
-    "Juan": 123,
-    "Snek": 123
+    "katz": 123,
+    "juan": 123,
+    "snek": 123
 }
 
 def is_valid_credentials(u,pw):
@@ -15,21 +19,27 @@ def is_valid_credentials(u,pw):
             print("Your deepest, darkest secret")
         else:
             print("Access Denied")'''
-        auth = {u,pw}
 
         if str(u) in Userlist:
             return(True)
 
     def is_valid_password():
-        if is_valid_credentials == True:
+        if is_valid_username == True:
             if int(pw) in Userlist:
                 return(True)
 
-    if is_valid_username == True and is_valid_password == True:
-        print("Secret")
+    if is_valid_username == True:
+        print("Username found...")
     
     else:
-        print("Debug")
+        print("Username Not found...")
+
+    if is_valid_password == True:
+        print("Password Authenticated. (secret)")
+    
+    else:
+        print("Authentication error.")
+
 
     is_valid_username()
     is_valid_password()
