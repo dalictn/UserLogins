@@ -13,38 +13,24 @@ Userlist = {
 }
 
 def is_valid_credentials():
-#Check if username is one of the keys, then return true for next function
+#Check if username is one of the keys, then get password, and compare to user input
     def is_valid_username():
-        '''if u == "Katz" and pw == "123":
-            print("Your deepest, darkest secret")
-        else:
-            print("Access Denied")'''
+
 
         if user in Userlist:
+            global passw
             passw = Userlist.get(str(user.lower()))
             print('////user found... Authenticating////')
 
-        def is_valid_password():
+    def is_valid_password():
             if int(Pass) == passw:
                 print('Secret')
             else:
                 print('Authentication failed')
+                
         
-        is_valid_password()
-    '''if is_valid_username():
-        print("Username found...")
-    
-    else:
-        print("Username Not found...")
-
-    if is_valid_password():
-        print("Password Authenticated. (secret)")
-    
-    else:
-        print("Authentication error.")'''
-
-
     is_valid_username()
+    is_valid_password()
     
 
     
