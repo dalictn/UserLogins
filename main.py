@@ -21,12 +21,18 @@ def is_valid_credentials():
             global passw
             passw = Userlist.get(str(user.lower()))
             print('////user found... Authenticating////')
+            
+        else:
+            print('User not found')
+            exit()
 
     def is_valid_password():
             if int(Pass) == passw:
                 print('Secret')
             else:
                 print('Authentication failed')
+                exit()
+                
                 
         
     is_valid_username()
